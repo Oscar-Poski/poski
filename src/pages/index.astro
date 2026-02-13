@@ -1,0 +1,50 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const cards = [
+  {
+    title: 'Escribo ideas y aprendizajes',
+    text: 'Notas sobre desarrollo, producto y proyectos personales.',
+    href: '/blog',
+    cta: 'Ir al blog'
+  },
+  {
+    title: 'Proyectos personales',
+    text: 'Experimentos, productos pequeños y cosas que estoy construyendo.',
+    href: '/projects',
+    cta: 'Ver proyectos'
+  },
+  {
+    title: 'Quién soy',
+    text: 'Mi enfoque técnico y lo que me motiva a crear.',
+    href: '/about',
+    cta: 'Leer about'
+  },
+  {
+    title: 'Contacto',
+    text: 'Si quieres colaborar o conversar, aquí tienes cómo escribirme.',
+    href: '/contact',
+    cta: 'Abrir contacto'
+  }
+];
+---
+
+<MainLayout title="Inicio | Poski" description="Blog personal de proyectos e ideas en español">
+  <section class="panel hero-panel">
+    <p class="eyebrow">Página Personal</p>
+    <h1>Oscar Rivera Sánchez</h1>
+    <p>
+      Compartiendo mi emoción por la búsqueda de conocimiento. Este sitio mezcla mi trabajo de ingeniería con exploraciones personales, en mi intento por encontrar mi lugar en el mundo.
+    </p>
+  </section>
+
+  <section class="bento-grid">
+    {cards.map((card) => (
+      <article class="panel bento-card">
+        <h2>{card.title}</h2>
+        <p>{card.text}</p>
+        <a href={card.href}>{card.cta}</a>
+      </article>
+    ))}
+  </section>
+</MainLayout>
