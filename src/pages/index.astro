@@ -1,41 +1,57 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+const withBase = (path = '') => {
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+  return `${base}${path}`;
+};
+const profileImage = withBase('images/about.png');
 
 const cards = [
   {
-    title: 'Escribo ideas y aprendizajes',
-    text: 'Notas sobre desarrollo, producto y proyectos personales.',
-    href: '/blog',
-    cta: 'Ir al blog'
+    title: 'Escribo mis ideas',
+    text: 'Mi visión del mundo. Aquí comparto mis ideas, mis sueños, mis frustraciones y más. Puedes conocerme con leer un poco.',
+    href: withBase('blog/'),
+    cta: 'Ver mi blog'
   },
   {
     title: 'Proyectos personales',
-    text: 'Experimentos, productos pequeños y cosas que estoy construyendo.',
-    href: '/projects',
+    text: 'Experimentos y proyectos en construcción. Sueño con crear comuniddes educativas accesibles y compartir la pasión por la búsqueda del conocimiento.',
+    href: withBase('proyectos/'),
     cta: 'Ver proyectos'
   },
   {
-    title: 'Quién soy',
-    text: 'Mi enfoque técnico y lo que me motiva a crear.',
-    href: '/about',
-    cta: 'Leer about'
+    title: '¿Quién soy?',
+    text: 'Soy una persona profundamente apasionada por la búsqueda del conocimiento. Creo firmemente que aprender es uno de los mayores placeres de la vida. Quiero ayudarte a encontrar tu lugar en el mundo.',
+    href: withBase('about/'),
+    cta: 'Más sobre quién soy'
   },
   {
     title: 'Contacto',
     text: 'Si quieres colaborar o conversar, aquí tienes cómo escribirme.',
-    href: '/contact',
+    href: withBase('contacto/'),
     cta: 'Abrir contacto'
   }
 ];
 ---
 
 <MainLayout title="Inicio | Poski" description="Blog personal de proyectos e ideas en español">
-  <section class="panel hero-panel">
-    <p class="eyebrow">Página Personal</p>
-    <h1>Oscar Rivera Sánchez</h1>
-    <p>
-      Compartiendo mi emoción por la búsqueda de conocimiento. Este sitio mezcla mi trabajo de ingeniería con exploraciones personales, en mi intento por encontrar mi lugar en el mundo.
-    </p>
+  <section class="top-grid">
+    <section class="panel hero-panel">
+      <p class="eyebrow">Página Personal</p>
+      <h1>Oscar Rivera Sánchez</h1>
+      <p>
+        Compartiendo mi emoción por la búsqueda de conocimiento. Este sitio mezcla mi trabajo de ingeniería con exploraciones personales, en mi intento por encontrar mi lugar en el mundo.
+      </p>
+    </section>
+
+    <aside class="panel photo-panel">
+      <img
+        class="photo-panel-image"
+        src={profileImage}
+        alt="Foto de perfil de Oscar Rivera Sánchez"
+        loading="lazy"
+      />
+    </aside>
   </section>
 
   <section class="bento-grid">

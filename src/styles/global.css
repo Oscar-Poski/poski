@@ -108,6 +108,35 @@ nav a:hover {
   color: var(--muted);
 }
 
+.top-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 5fr 1fr;
+  align-items: stretch;
+}
+
+.hero-panel,
+.photo-panel {
+  height: 100%;
+}
+
+.photo-panel {
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-panel-image {
+  width: min(100%, 100px);
+  height: 100%;
+  min-height: 0px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--panel-border);
+  display: block;
+}
+
 .eyebrow {
   margin: 0;
   text-transform: uppercase;
@@ -171,17 +200,6 @@ nav a:hover {
   margin: 1.25rem 0;
 }
 
-.about-photo {
-  display: block;
-  width: min(260px, 100%);
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid var(--panel-border);
-  margin: 0 0 1.2rem;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
-}
-
 .footer-panel {
   color: var(--muted);
   font-size: 0.9rem;
@@ -189,6 +207,14 @@ nav a:hover {
 }
 
 @media (max-width: 900px) {
+  .top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-panel-image {
+    min-height: 220px;
+  }
+
   .bento-card,
   .bento-card:nth-child(1),
   .bento-card:nth-child(4) {

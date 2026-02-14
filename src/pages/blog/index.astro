@@ -1,6 +1,10 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import { getCollection } from 'astro:content';
+const withBase = (path = '') => {
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+  return `${base}${path}`;
+};
 
 const posts = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
@@ -10,7 +14,7 @@ const posts = (await getCollection('blog'))
 <MainLayout title="Blog | poski.dev" description="Ideas y notas sobre tecnología y proyectos personales">
   <section class="panel page-header">
     <p class="eyebrow">Blog</p>
-    <h1>Artículos en Markdown/MDX</h1>
+    <h1>Espacio para despejar las ideas que llenan mi cabeza</h1>
   </section>
 
   <section class="posts-grid">
@@ -19,7 +23,7 @@ const posts = (await getCollection('blog'))
         <p class="post-date">{post.data.publishedAt.toLocaleDateString('es-ES')}</p>
         <h2>{post.data.title}</h2>
         <p>{post.data.description}</p>
-        <a href={`/blog/${post.slug}/`}>Leer artículo</a>
+        <a href={withBase(`blog/${post.slug}/`)}>Leer artículo</a>
       </article>
     ))}
   </section>

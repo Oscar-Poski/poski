@@ -1,6 +1,6 @@
 ---
-title: Bienvenido a mi blog
-description: Primera publicación para arrancar el sitio
+title: La Justicia
+description: ¿Por qué ser justo en un mundo injusto?
 publishedAt: 2026-02-13
 draft: false
 ---
