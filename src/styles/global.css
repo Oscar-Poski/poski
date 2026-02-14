@@ -200,6 +200,11 @@ nav a:hover {
   margin: 1.25rem 0;
 }
 
+.prose .acento {
+  color: #1dd2a2;
+  font-weight: 600;
+}
+
 .footer-panel {
   color: var(--muted);
   font-size: 0.9rem;

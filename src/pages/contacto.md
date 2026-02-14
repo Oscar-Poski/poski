@@ -10,8 +10,7 @@ description: "Canales para conversar o colaborar"
 
 Si quieres hablar sobre colaboración, ideas o proyectos:
 
-- Email: tu-correo@ejemplo.com
-- GitHub: https://github.com/tu-usuario
-- X/Twitter: https://x.com/tu-usuario
+- Email: oscar.riversan@gmail.com
+- LinkedIn: https://www.linkedin.com/in/oscar-poski/
 
 </section>
