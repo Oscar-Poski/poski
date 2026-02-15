@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import DocsLayout from '../../layouts/DocsLayout.astro';
+
+const withBase = (path = '') => {
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+  return `${base}${path}`;
+};
+
+const notes = (await getCollection('notas'))
+  .filter((note) => !note.data.draft)
+  .sort((a, b) => a.data.order - b.data.order || a.slug.localeCompare(b.slug));
+
+const groupsMap = new Map<string, { slug: string; title: string; order: number }[]>();
+
+for (const note of notes) {
+  const [section = 'General'] = note.slug.split('/');
+  const sectionLabel = section.charAt(0).toUpperCase() + section.slice(1);
+
+  if (!groupsMap.has(sectionLabel)) {
+    groupsMap.set(sectionLabel, []);
+  }
+
+  groupsMap.get(sectionLabel)?.push({
+    slug: note.slug,
+    title: note.data.title,
+    order: note.data.order
+  });
+}
+
+const groups = [...groupsMap.entries()]
+  .map(([section, sectionNotes]) => ({
+    section,
+    notes: sectionNotes.sort((a, b) => a.order - b.order || a.slug.localeCompare(b.slug))
+  }))
+  .sort((a, b) => a.section.localeCompare(b.section));
+---
+
+<DocsLayout
+  title="Notas | Poski"
+  description="Notas personales"
+  groups={groups}
+>
+  <p class="eyebrow">Notas</p>
+  <h1>Notas Filosofía Griega</h1>
+  <p>
+    Este espacio funciona como mi base de notas de los temas que me han emocionado últimamente.
+  </p>
+
+  <hr />
+
+  <section class="docs-index-list">
+    {groups.map((group) => (
+      <section>
+        <h2>{group.section}</h2>
+        <ul>
+          {group.notes.map((note) => (
+            <li>
+              <a href={withBase(`notas/${note.slug}/`)}>{note.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </section>
+</DocsLayout>

@@ -173,6 +173,57 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.docs-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.docs-sidebar {
+  position: sticky;
+  top: 6.2rem;
+}
+
+.docs-group + .docs-group {
+  margin-top: 1rem;
+}
+
+.docs-group h2 {
+  margin: 0 0 0.45rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.docs-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.docs-group a {
+  color: var(--muted);
+  display: block;
+  padding: 0.3rem 0.45rem;
+  border-radius: 8px;
+}
+
+.docs-group a:hover,
+.docs-group a.active {
+  background: rgba(132, 211, 255, 0.12);
+  color: var(--text);
+}
+
+.docs-content {
+  min-height: 420px;
+}
+
+.docs-index-list ul {
+  margin: 0 0 0.8rem;
+}
+
 .post-card,
 .article-panel {
   min-height: 180px;
@@ -201,7 +252,7 @@ nav a:hover {
 }
 
 .prose .acento {
-  color: #1dd2a2;
+  color: #84d3ff;
   font-weight: 600;
 }
 
@@ -218,6 +269,14 @@ nav a:hover {
 
   .photo-panel-image {
     min-height: 220px;
+  }
+
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-sidebar {
+    position: static;
   }
 
   .bento-card,

@@ -1,0 +1,56 @@
+---
+import MainLayout from './MainLayout.astro';
+
+interface NoteItem {
+  slug: string;
+  title: string;
+  order: number;
+}
+
+interface SectionGroup {
+  section: string;
+  notes: NoteItem[];
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  groups: SectionGroup[];
+  currentSlug?: string;
+}
+
+const { title, description = '', groups, currentSlug = '' } = Astro.props;
+const withBase = (path = '') => {
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+  return `${base}${path}`;
+};
+---
+
+<MainLayout title={title} description={description}>
+  <section class="docs-grid">
+    <aside class="panel docs-sidebar">
+      <p class="eyebrow">Notas</p>
+      {groups.map((group) => (
+        <section class="docs-group">
+          <h2>{group.section}</h2>
+          <ul>
+            {group.notes.map((note) => (
+              <li>
+                <a
+                  href={withBase(`notas/${note.slug}/`)}
+                  class={currentSlug === note.slug ? 'active' : ''}
+                >
+                  {note.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </aside>
+
+    <article class="panel docs-content prose">
+      <slot />
+    </article>
+  </section>
+</MainLayout>
