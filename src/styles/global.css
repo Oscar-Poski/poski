@@ -111,30 +111,7 @@ nav a:hover {
 .top-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 5fr 1fr;
   align-items: stretch;
-}
-
-.hero-panel,
-.photo-panel {
-  height: 100%;
-}
-
-.photo-panel {
-  padding: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.photo-panel-image {
-  width: min(100%, 100px);
-  height: 100%;
-  min-height: 0px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid var(--panel-border);
-  display: block;
 }
 
 .eyebrow {
@@ -253,7 +230,11 @@ nav a:hover {
 
 .prose .acento {
   color: #84d3ff;
-  font-weight: 600;
+  font-weight: bolder;
+}
+
+.prose .blog {
+  font-size: x-large;
 }
 
 .footer-panel {
@@ -265,10 +246,6 @@ nav a:hover {
 @media (max-width: 900px) {
   .top-grid {
     grid-template-columns: 1fr;
-  }
-
-  .photo-panel-image {
-    min-height: 220px;
   }
 
   .docs-grid {

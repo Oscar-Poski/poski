@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/MainLayout.astro
-title: "Proyectos | poski.dev"
+title: "Proyectos | Poski"
 description: "Proyectos personales y experimentos"
 ---
 

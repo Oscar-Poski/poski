@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/MainLayout.astro
-title: "Contacto | poski.dev"
+title: "Contacto | Poski"
 description: "Canales para conversar o colaborar"
 ---
 

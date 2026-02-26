@@ -11,7 +11,7 @@ const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
 ---
 
-<MainLayout title="Blog | poski.dev" description="Ideas y notas sobre tecnología y proyectos personales">
+<MainLayout title="Blog | Poski" description="Ideas y notas sobre tecnología y proyectos personales">
   <section class="panel page-header">
     <p class="eyebrow">Blog</p>
     <h1>Espacio para despejar las ideas que llenan mi cabeza</h1>
