@@ -250,8 +250,8 @@ export function LessonPlayer({
               onClick={toggleCurrentLesson}
               className={`rounded-lg px-4 py-2 text-sm font-semibold transition ${
                 isCurrentCompleted
-                  ? 'bg-emerald-600 text-white hover:bg-emerald-500'
-                  : 'bg-primary text-primary-foreground hover:opacity-90'
+                  ? 'bg-amber-600 text-black hover:bg-amber-500'
+                  : 'bg-primary text-black hover:opacity-90'
               }`}
             >
               {isCurrentCompleted ? 'Marcar como pendiente' : 'Marcar como completada'}

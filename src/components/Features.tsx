@@ -1,55 +1,55 @@
 import { motion } from "framer-motion";
 import {
-  Brain,
-  Wrench,
-  Flag,
-  Bookmark,
-  Footprints,
+  GlassesIcon,
+  ClockIcon,
+  TargetIcon,
+  TriangleIcon,
+  HandCoinsIcon,
   BookOpenText
 } from "lucide-react";
 
 const features = [
   {
-    icon: Brain,
-    title: "Lecciones Digeribles",
+    icon: GlassesIcon,
+    title: "Aprender es Placer",
     description:
-      "Dividimos el material en partes digeribles para facilitar la comprensión del contenido.",
-    gradient: "from-purple-500 to-pink-500",
-  },
-  {
-    icon: Footprints,
-    title: "Pequeños Pasos",
-    description:
-      "Esto permite que cualquiera pueda empezar con una sola lección y avanzar paso a paso.",
+      "Creo firmemente que aprender es uno de los mayores placeres de la vida.",
     gradient: "from-yellow-500 to-orange-500",
   },
   {
-    icon: Wrench,
-    title: "Habilidades Adquiridas",
+    icon: HandCoinsIcon,
+    title: "Privilegio de Pocos",
     description:
-      "El avance reafirma los conocimientos adquiridos a través de los módulos y los convierte en habilidades adquiridas.",
-    gradient: "from-green-500 to-emerald-500",
+      "Para la mayoría, la educación representa un medio para obtener credibilidad social y, a través de ella, una recompensa económica por sus servicios.",
+    gradient: "from-yellow-500 to-orange-500",
   },
   {
-    icon: Flag,
-    title: "Curso",
+    icon: ClockIcon,
+    title: "Aprender es un Lujo",
     description:
-      "El bloque de aprendizaje más grande es un curso.",
-    gradient: "from-blue-500 to-cyan-500",
+      "Pocos cuentan con el tiempo, la energía o la curiosidad para encontrar en el aprendizaje un camino hacia la autorrealización.",
+    gradient: "from-yellow-500 to-orange-500",
   },
   {
-    icon: Bookmark,
-    title: "Módulo",
+    icon: TargetIcon,
+    title: "Mi Objetivo",
     description:
-      "El curso se divide en varios módulos, cada uno de los cuales cubre un tema específico e independiente.",
-    gradient: "from-indigo-500 to-purple-500",
+      "Construir comunidades de aprendizaje donde las personas se inspiren mutuamente a buscar su mejor versión y a encontrar su lugar en el mundo.",
+    gradient: "from-yellow-500 to-orange-500",
+  },
+  {
+    icon: TriangleIcon,
+    title: "Limitantes",
+    description:
+      "Desigualdad. Es necesario atender las necesidades primarias y, desde ahí, aspirar a las más elevadas.",
+    gradient: "from-yellow-500 to-orange-500",
   },
   {
     icon: BookOpenText,
-    title: "Lección",
+    title: "La Visión",
     description:
-      "Los módulos de dividen en lecciones digeribles y fáciles de aprender.",
-    gradient: "from-pink-500 to-rose-500",
+      "Reducir las brechas existentes y desarrollar propuestas educativas que promuevan la accesibilidad.",
+    gradient: "from-yellow-500 to-orange-500",
   },
 ];
 
@@ -73,18 +73,6 @@ export function Features() {
     <section id="features" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-5xl font-bold"
-          >
-            Cualquier persona puede{" "}
-            <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-400 bg-clip-text text-transparent animate-gradient">
-              Aprender
-            </span>
-          </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +80,7 @@ export function Features() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Las grandes cosas no se logran por impulso, sino mediante una serie de pequeños actos de disciplina.
+          Compartiendo mi emoción por el aprendizaje y la búsqueda de nuevos conocimientos. Este sitio mezcla mi trabajo de ingeniería con exploraciones personales, en mi intento por encontrar mi lugar en el mundo.
           </motion.p>
         </div>
 

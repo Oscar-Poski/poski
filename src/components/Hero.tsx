@@ -8,9 +8,9 @@ export function Hero() {
     <section className="relative overflow-hidden py-20 md:py-32">
       {/* Background gradients */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 -left-4 w-72 h-72 bg-emerald-300 dark:bg-emerald-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob" />
-        <div className="absolute top-0 -right-4 w-72 h-72 bg-teal-300 dark:bg-teal-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-cyan-300 dark:bg-cyan-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob animation-delay-4000" />
+        <div className="absolute top-0 -left-4 w-72 h-72 bg-amber-300 dark:bg-amber-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob" />
+        <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 dark:bg-yellow-500 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-orange-300 dark:bg-amber-400 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob animation-delay-4000" />
       </div>
 
       <div className="container mx-auto px-4">
@@ -20,12 +20,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-          >
-            <div className="inline-flex items-center gap-2 rounded-full border bg-background/60 backdrop-blur-sm px-4 py-1.5 text-sm">
-              <GraduationCap className="h-4 w-4 text-primary" />
-              <span className="text-muted-foreground">Hecho con amor por Hekademos IT</span>
-            </div>
-          </motion.div>
+          ></motion.div>
 
           {/* Main Heading */}
           <motion.h1
@@ -34,10 +29,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl"
           >
-            <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-400 bg-clip-text text-transparent animate-gradient">
-              Aprende
+            <span className="bg-gradient-to-r from-yellow-600 via-amber-600 to-yellow-600 dark:from-amber-400 dark:via-yellow-400 dark:to-amber-400 bg-clip-text text-transparent animate-gradient">
+              Poski
             </span>
-            {" "} desde cero y consigue tu primer trabajo.
           </motion.h1>
 
           {/* Subheading */}
@@ -47,9 +41,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl"
           >
-            Descubre si el desarrollo de software es para ti.
-            Consigue tu primer trabajo en la industria.
-            ¡Solo tienes que estudiar un poco!
+            Blog personal, notas y proyectos.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -61,40 +53,10 @@ export function Hero() {
           >
             <a href={withBase("/cursos")}>
               <Button size="lg" className="group">
-                Inicia tu camino
+                Notas
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="grid grid-cols-3 gap-8 pt-8"
-          >
-            <div className="flex flex-col items-center">
-              <div className="flex items-center gap-1 text-2xl md:text-3xl font-bold">
-                <BookOpenText className="h-6 w-6 text-amber-500" />
-                <span>1</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Curso Disponible</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center gap-1 text-2xl md:text-3xl font-bold">
-                <GraduationCap className="h-6 w-6 text-primary" />
-                <span>1</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Estudiante</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center gap-1 text-2xl md:text-3xl font-bold">
-                <Laptop className="h-6 w-6 text-purple-500" />
-                <span>1</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Trabajo Generado</p>
-            </div>
           </motion.div>
         </div>
       </div>

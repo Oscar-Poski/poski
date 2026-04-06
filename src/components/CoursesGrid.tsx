@@ -67,9 +67,6 @@ export function CoursesGrid({ learningTracks }: CoursesGridProps) {
                     <div className="inline-flex rounded-lg bg-primary/10 p-2 text-primary">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
-                      {course.level}
-                    </span>
                   </div>
 
                   <h3 className="mt-4 text-xl font-semibold">{course.title}</h3>
@@ -77,12 +74,11 @@ export function CoursesGrid({ learningTracks }: CoursesGridProps) {
 
                   <div className="mt-4 flex flex-wrap gap-2 text-xs text-muted-foreground">
                     <span className="rounded-full border px-2 py-1">{course.modules.length} módulos</span>
-                    <span className="rounded-full border px-2 py-1">{course.estimatedHours} horas</span>
                   </div>
 
                   <div className="mt-5 flex items-center gap-4">
                     <a href={withBase(`/cursos/${track.slug}/${course.slug}`)} className="text-sm font-medium text-primary hover:underline">
-                      Ver programa
+                      Ver Módulos
                     </a>
                     <a href={startHref} className="inline-flex items-center gap-1 text-sm font-semibold text-foreground">
                       Iniciar
