@@ -10,7 +10,7 @@ const site =
 
 export default defineConfig({
   site,
-  base: '/heka',
+  base: '/poski',
   integrations: [
     react(),
     tailwind({
