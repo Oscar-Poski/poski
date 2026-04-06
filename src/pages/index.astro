@@ -3,7 +3,7 @@ import Layout from '../layouts/main.astro';
 import { getCollection } from 'astro:content';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
-import BlogSection from '@/pages/BlogSection.astro';
+import BlogSection from '@/components/BlogSection.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
