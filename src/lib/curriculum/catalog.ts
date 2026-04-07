@@ -135,6 +135,114 @@ export const curriculumCatalog: CatalogTrack[] = [
         ]
       },
       {
+        slug: 'platon',
+        title: 'Platón',
+        level: 'básico',
+        summary: '',
+        estimatedHours: 0,
+        modules: [
+          {
+            slug: 'contexto',
+            title: 'Contexto Histórico',
+            summary: '',
+          },
+          {
+            slug: 'carmides',
+            title: 'Cármides (Sophrosyne)',
+            summary: '',
+          },
+          {
+            slug: 'eutidemo',
+            title: 'Eutidemo (Virtud)',
+            summary: '',
+          },
+          {
+            slug: 'gorgias',
+            title: 'Gorgias (Justicia)',
+            summary: '',
+          },
+          {
+            slug: 'menon',
+            title: 'Menón (Virtud / Recolección)',
+            summary: '',
+          },
+          {
+            slug: 'teeteto',
+            title: 'Teeteto (Episteme)',
+            summary: '',
+          },
+          {
+            slug: 'politeia',
+            title: 'La República (Politeia)',
+            summary: '',
+          },
+          {
+            slug: 'parmenides',
+            title: 'Parménides (Formas / Ser)',
+            summary: '',
+          },
+          {
+            slug: 'sofista',
+            title: 'Sofista (Ser)',
+            summary: '',
+          },
+          {
+            slug: 'cratilo',
+            title: 'Crátilo (Etimología)',
+            summary: '',
+          },
+          {
+            slug: 'timeo',
+            title: 'Timeo (Cosmos)',
+            summary: '',
+          },
+          {
+            slug: 'symposium',
+            title: 'El Banquete (Symposium)',
+            summary: '',
+          },
+          {
+            slug: 'fedro',
+            title: 'Fedro (Eros / Discursos)',
+            summary: '',
+          },
+          {
+            slug: 'lisis',
+            title: 'Lisis (Philia)',
+            summary: '',
+          },
+          {
+            slug: 'ion',
+            title: 'Ion (Inspiración Divina)',
+            summary: '',
+          },
+        ]
+      },
+      {
+        slug: 'aristoteles',
+        title: 'Aristóteles',
+        level: 'básico',
+        summary: '',
+        estimatedHours: 0,
+        modules: [
+          {
+            slug: 'categorias',
+            title: 'Categorías',
+            summary: '',
+          },
+          {
+            slug: 'interpretacion',
+            title: 'Interpretación',
+            summary: '',
+          },
+          {
+            slug: 'analiticos',
+            title: 'Analíticos Primeros',
+            summary: '',
+          },
+        ]
+      },
+      {
         slug: 'misc',
         title: 'Misceláneo',
         level: 'básico',
