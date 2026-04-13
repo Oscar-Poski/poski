@@ -245,6 +245,11 @@ export const curriculumCatalog: CatalogTrack[] = [
             title: 'Analíticos Primeros Libro II',
             summary: '',
           },
+          {
+            slug: 'analiticos-iii',
+            title: 'Analíticos Segundos Libro I',
+            summary: '',
+          },
         ]
       },
       {

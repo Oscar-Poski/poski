@@ -90,6 +90,12 @@ Esto muestra que:
 
 ---
 
+- Todos los perros son gatos.
+- Todos los gatos son mamíferos.
+- ∴ Todos los perros son mamíferos.
+
+---
+
 ## 2.3 Conclusiones verdaderas a partir de premisas falsas en la segunda figura
 
 (**Bekker 55a–56a aprox.**)
@@ -133,6 +139,12 @@ Esto introduce una idea clave:
 
 ---
 
+- Ningún pez es ave.
+- Todos los perros son aves.
+- ∴ Ningún perro es pez.
+
+---
+
 ## 2.4 Conclusiones verdaderas a partir de premisas falsas en la tercera figura
 
 (**Bekker 56a–57a aprox.**)
@@ -170,3 +182,10 @@ La tercera figura tiene una característica especial:
 
 > Al producir conclusiones particulares, es más fácil que una conclusión sea verdadera **por coincidencia**, incluso si las premisas son incorrectas.
 >
+
+---
+
+- Todos los perros son mamíferos.
+- Todos los perros son dálmatas.
+- ∴ Algunos dálmatas son perros.
+

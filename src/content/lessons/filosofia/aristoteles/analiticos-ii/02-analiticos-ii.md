@@ -34,7 +34,9 @@ Aristóteles critica este tipo de razonamiento:
 
 ### Idea central:
 
-> La demostración científica debe partir de principios **anteriores y mejor conocidos**, no de lo mismo que intenta probar.
+> probar, a través de la conclusión y de tomar una de las proposiciones a la inversa en cuanto a la predicación, la restante proposición que se tomó en el otro razonamiento.
+> 
+> Así pues, la comprobación y el razonamiento de comprobación consisten en probar, a través de uno de los extremos, que el otro se da en el medio.
 > 
 
 ---
