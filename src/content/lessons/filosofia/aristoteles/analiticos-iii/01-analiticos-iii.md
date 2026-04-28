@@ -7,28 +7,6 @@ title: Las condiciones del conocimiento científico (1.1 - 1.6)
 order: 1
 ---
 
-# Resumen de ideas
-
->Todo aprendizaje y toda enseñanza proceden de un conocimiento previo — 71a1–2.
->
->Saber científicamente es conocer la causa y saber que no puede ser de otro modo — 71b9–12.
->
->La demostración es un silogismo científico — 71b18–19.
->
->Las premisas de la demostración deben ser verdaderas, primeras, inmediatas, más conocidas, anteriores y causas de la conclusión — 71b20–23.
->
->Distinción entre lo más conocido para nosotros y lo más conocido por naturaleza — 71b33–72a5.
->
->Rechazo de la demostración circular y de la regresión infinita; necesidad de principios primeros — 72a25–72b23.
->
->Análisis de los atributos que pertenecen “de todo”, “por sí” y universalmente — 73a21–73b24.
->
->Crítica a la falsa universalidad obtenida por enumeración de subcasos — 73b25–74a3.
->
->La demostración científica requiere premisas necesarias — 74b5–75a18 aprox.
-
----
-
 # 1.1 El conocimiento preexistente y el aprendizaje
 
 ## (*Analíticos segundos* I.1, **71a1–71b8** aprox.)

@@ -157,7 +157,7 @@ export function LessonPlayer({
     ? Math.round((completedCount / moduleLessons.length) * 100)
     : 0;
   const isCurrentCompleted = completedIds.has(lessonId);
-  const canOpenNext = !nextLesson || isCurrentCompleted;
+  //const canOpenNext = !nextLesson || isCurrentCompleted;
 
   const toggleCurrentLesson = () => {
     const nextSet = new Set(completedIds);
@@ -177,11 +177,11 @@ export function LessonPlayer({
         <aside className="order-2 h-fit rounded-2xl border bg-card p-4 lg:sticky lg:top-24">
           <p className="text-xs uppercase tracking-wide text-muted-foreground">{courseTitle}</p>
           <h2 className="mt-1 text-lg font-semibold">{moduleTitle}</h2>
-          <p className="mt-1 text-sm text-muted-foreground">Progreso del módulo</p>
+          <p className="mt-1 text-sm text-muted-foreground">Progreso</p>
 
           <div className="mt-4">
             <div className="mb-2 flex items-center justify-between text-sm">
-              <span>{completedCount} / {moduleLessons.length} lecciones</span>
+              <span>{completedCount} / {moduleLessons.length} Notas</span>
               <span>{progressPercent}%</span>
             </div>
             <div className="h-2 rounded-full bg-secondary">
@@ -193,7 +193,7 @@ export function LessonPlayer({
           </div>
 
           <a href={courseHref} className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
-            Ver todos los módulos
+            Ver todos los subtemas
           </a>
 
           <div className="mt-5 space-y-2">
@@ -218,11 +218,19 @@ export function LessonPlayer({
                   {isDone && <p className="text-xs text-primary">Completada</p>}
                 </a>
               ) : (
-                <div key={node.id} className="rounded-lg border border-dashed px-3 py-2 text-sm opacity-60">
+                <a
+                  key={node.id}
+                  href={node.href}
+                  className={`block rounded-lg border px-3 py-2 text-sm transition ${
+                    isCurrent
+                      ? 'border-primary bg-primary/10 text-foreground'
+                      : 'border-border hover:border-primary/40 hover:bg-accent'
+                  }`}
+                >
                   <p className="text-xs text-muted-foreground">{node.moduleTitle}</p>
                   <p className="font-medium">{node.title}</p>
-                  <p className="text-xs text-muted-foreground">Bloqueada hasta completar la anterior</p>
-                </div>
+                  {isDone && <p className="text-xs text-primary">Completada</p>}
+                </a>
               );
             })}
           </div>
@@ -232,9 +240,8 @@ export function LessonPlayer({
           <p className="text-sm text-muted-foreground">{moduleTitle}</p>
           <h1 className="mt-1 text-3xl font-bold">{lesson.title}</h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            Lección {currentIndex + 1} de {moduleLessons.length}
+            Nota {currentIndex + 1} de {moduleLessons.length}
           </p>
-          <p className="mt-3 text-base text-muted-foreground">{lesson.summary}</p>
 
           <section className="mt-8 space-y-3">
             <div
@@ -268,19 +275,11 @@ export function LessonPlayer({
             )}
 
             {nextLesson ? (
-              canOpenNext ? (
-                <a href={nextLesson.href} className="rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background">
-                  Siguiente
-                </a>
-              ) : (
-                <span className="rounded-lg border border-dashed px-4 py-2 text-sm text-muted-foreground">
-                  Completa esta lección para desbloquear la siguiente
-                </span>
-              )
+              <a href={nextLesson.href} className="rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background">
+                Siguiente
+              </a> 
             ) : (
-              <a href={currentHref} className="rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background">
-                Repetir lección
-              </a>
+              <p> No hay siguiente </p>
             )}
           </section>
         </article>

@@ -75,16 +75,12 @@ export function CoursesGrid({ learningTracks }: CoursesGridProps) {
                   <p className="mt-2 text-sm text-muted-foreground">{course.summary}</p>
 
                   <div className="mt-4 flex flex-wrap gap-2 text-xs text-muted-foreground">
-                    <span className="rounded-full border px-2 py-1">{course.modules.length} módulos</span>
+                    <span className="rounded-full border px-2 py-1">{course.modules.length} Subtemas</span>
                   </div>
 
                   <div className="mt-5 flex items-center gap-4">
-                    <a href={withBase(`/cursos/${track.slug}/${course.slug}`)} className="text-sm font-medium text-primary hover:underline">
-                      Ver Módulos
-                    </a>
-                    <a href={startHref} className="inline-flex items-center gap-1 text-sm font-semibold text-foreground">
-                      Iniciar
-                      <ArrowRight className="h-4 w-4" />
+                    <a href={withBase(`/cursos/${track.slug}/${course.slug}`)} className="text-l font-medium text-primary hover:underline">
+                      Ver Subtemas
                     </a>
                   </div>
                 </motion.article>
